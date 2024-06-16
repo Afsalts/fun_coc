@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImJiNDEzNzdmLWQxZjYtNDEwMi1hZjlkLWFkMjFmOTE4MGVlMyIsImlhdCI6MTcxODQ3MDIzNiwic3ViIjoiZGV2ZWxvcGVyLzhjYWU5ZWNmLWJmN2EtMmVkNy1kNzYzLWQ1YTFjMDZkOTM5NiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjE1Ny40Ni4xMzguMTAxIiwiNDIuMTA1LjEzLjIzNSJdLCJ0eXBlIjoiY2xpZW50In1dfQ.nlo_FA6pwvRR63WsEZlTgMxd2qDDAf-kXkMOqxarOIWbr5dLtqzo0YyfywzFyTbV9zRqqFEI5bT7Myc_5TD4lA'
+API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjAxZDRlNjVhLWVlMTctNDFkZi1iYTFlLTRlYmIzODg1MWY0NCIsImlhdCI6MTcxODUyMTk1OSwic3ViIjoiZGV2ZWxvcGVyLzhjYWU5ZWNmLWJmN2EtMmVkNy1kNzYzLWQ1YTFjMDZkOTM5NiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjE1Ny40Ni4xNTguMTUyIl0sInR5cGUiOiJjbGllbnQifV19.Cw0ssnVe8No0C3W7Zr314XXCtJ0MsmUDefGCkmydszis25lDE_bPc3m2ifJtivzJlKtU6e822DFk21_tswj9kA'
 def get_clan_members(api_key, clan_tag):
     url = f'https://api.clashofclans.com/v1/clans/{clan_tag.replace("#", "%23")}/members'
     headers = {
@@ -24,7 +24,7 @@ def main():
     st.title('Clash of Clans Clan and Player Info')
     
     clan_tag = st.text_input('Enter Clan Tag (with #):', value='#')
-    #clan_tag='#J9L2QCJC'
+    clan_tag='#J9L2QCJC'
     
     if clan_tag:
         try:
