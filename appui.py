@@ -23,7 +23,7 @@ def get_player_info(api_key, player_tag):
 def main():
     st.title('Clash of Clans Clan and Player Info')
     
-    clan_tag = st.text_input('Enter Clan Tag (with #):', value='#')
+    #clan_tag = st.text_input('Enter Clan Tag (with #):', value='#')
     clan_tag='#J9L2QCJC'
     
     if clan_tag:
